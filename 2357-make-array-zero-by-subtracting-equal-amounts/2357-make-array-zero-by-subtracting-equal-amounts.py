@@ -1,10 +1,9 @@
 class Solution:
     def minimumOperations(self, nums: List[int]) -> int:
-        s = len(set(nums))
         if 0 in nums:
-            return s-1
+            return len(set(nums))-1
         else:
-            return s
+            return len(set(nums))
         
         """count = 0
         while(0 in nums):
