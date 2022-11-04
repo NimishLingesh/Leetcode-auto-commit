@@ -1,6 +1,11 @@
 class Solution:
     def minimumOperations(self, nums: List[int]) -> int:
-        count = 0
+        if 0 in nums:
+            return len(set(nums))-1
+        else:
+            return len(set(nums))
+        
+        """count = 0
         while(0 in nums):
             nums.remove(0)
         while(len(nums)>0):
@@ -12,6 +17,5 @@ class Solution:
                 if nums[idx] <= 0:
                     lst.insert(0, idx)
             for index in lst:
-                # print(index)
                 nums.pop(index)
-        return count
+        return count"""
