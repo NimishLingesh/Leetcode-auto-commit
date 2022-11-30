@@ -4,13 +4,21 @@ class RandomizedSet:
         self.dic = set()
 
     def insert(self, val: int) -> bool:
-        if val in self.dic:
-            return False
-        else:
-            self.dic.add(val)
-            return True
+        len1 = len(self.dic)
+        self.dic.add(val)
+        len2 = len(self.dic)
+        return not (len1 == len2)
+        # if val in self.dic:
+        #     return False
+        # else:
+        #     self.dic.add(val)
+        #     return True
 
     def remove(self, val: int) -> bool:
+        # len1 = len(self.dic)
+        # self.dic.remove(val)
+        # len2 = len(self.dic)
+        # return not (len1 == len2)
         if val in self.dic:
             self.dic.remove(val)
             return True
